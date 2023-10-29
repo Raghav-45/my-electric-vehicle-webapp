@@ -1,20 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import { Button } from './components/ui/button'
 import Layout from './components/Layout'
 import ContextProvider from './contexts/ContextApi'
+import Home from './pages/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <ContextProvider>
       <Layout>
-        <div className="p-4">
-          <Button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </Button>
-        </div>
+        <Home />
       </Layout>
     </ContextProvider>
   )
