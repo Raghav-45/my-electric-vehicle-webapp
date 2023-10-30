@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 interface ContextType {
   geoLoc: { lat: number | null, lng: number | null }
@@ -44,7 +44,7 @@ export default function ContextProvider({ children }: { children: React.ReactNod
   //   return () => clearInterval(interval)
   // }, [geoLoc])
 
-  // useEffect(() => {
+  useEffect(() => {
     // const updateGeoLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.watchPosition((rawPosition) => {
@@ -58,7 +58,7 @@ export default function ContextProvider({ children }: { children: React.ReactNod
 
     // const interval = setInterval(() => updateGeoLocation(), 3000)
     // return () => clearInterval(interval)
-  // }, [])
+  }, [])
 
   const value = {
     geoLoc,
