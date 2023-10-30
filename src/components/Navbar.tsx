@@ -1,4 +1,4 @@
-import { LeafIcon, UserIcon } from "lucide-react"
+import { LeafIcon } from "lucide-react"
 import { Button } from "./ui/button"
 import UserProfileNav from "./UserProfileNav"
 
@@ -26,9 +26,6 @@ const Navbar = () => {
             <>
               {/* <Button className='rounded-full h-8'>Logout</Button> */}
               <UserProfileNav name='raghav' email='raghavbhai4545@gmail.com' image="https://github.com/shadcn.png" />
-              {/* <Button variant='outline' size='icon' className='rounded-full border-[3px] h-8 w-8' >
-                <UserIcon className="h-5 w-5" />
-              </Button> */}
             </>
           }
         </div>
